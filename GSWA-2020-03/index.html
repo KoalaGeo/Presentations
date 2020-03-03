@@ -14,7 +14,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/bgs.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -33,36 +33,65 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
 					<h1>BGS</h1>
-					<h2>Current Projects</h2>
+					<p>Current Projects</p>
 				</section>
 				<section>
 					<h2>Acknowledgement</h2>
-					<h4>I would like to show my respect and acknowledge the traditional custodians of this land, the Whadjuk people, and of elders past and present, on which this meeting takes place.<h4>
+					<p>I would like to show my respect and acknowledge the traditional custodians of this land, the Whadjuk people, and of elders past and present, on which this meeting takes place.<p>
+					<aside class="notes">
+						I would like to show my respect and acknowledge the traditional custodians of this land, the Whadjuk people, and of elders past and present, on which this meeting takes place.
+					</aside>
 				</section>
-				<section>W
-					<h2>Who am I?</h2>
-					<p>
-						<small>Not an existential question...</small>
-					</p>
-					<p>
-					Edd Lewis<br>
-					Geologist/Stanadards Lead & FOSS advocate<br>
-					10 years in MinEx/Mining (>5 in Australia)<br>
-					2 years in Government (mineral promotion/resource policy/capacity building/standards)
-					</p>
-					<a href="mailto:edlew@bgs.ac.uk?subject=GSWA" target="_top">edlew@bgs.ac.uk</a><br>
-					<a href="https://twitter.com/Geologist_Edd?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a class="github-button" href="https://github.com/koalageo" aria-label="Follow @koalageo on GitHub">Follow @koalageo</a>
+				<section>
+					<section id="fragments">
+						<h2>Who am I?</h2>
+						<p class="fragment fade-in-then-semi-out"><small>Not an existential question...</small></p>
+						<p class="fragment">Edd Lewis</p>
+						<p class="fragment">BGS Geologist/Standards Lead (& FOSS advocate)</p>
+						<p class="fragment">10 years in MinEx/Mining (>5 in Australia)</p>
+						<p class="fragment">2 years in Government (mineral promotion/resource policy/capacity building/standards)</p>
+						<a href="mailto:edlew@bgs.ac.uk?subject=GSWA" target="_top">edlew@bgs.ac.uk</a>
+						<a href="https://twitter.com/Geologist_Edd?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a class="github-button" href="https://github.com/koalageo" aria-label="Follow @koalageo on GitHub">Follow @koalageo</a>
+						<aside class="notes">
+							Who am I?
+						</aside>
+					</section>
 				</section>
-				<!-- Example of nested vertical slides -->
+				<!-- GroundHog -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
+						<h2>GroundHog</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+				<!-- GeoVisionary -->
+				<section>
+					<section>
+						<h2>GeoVisionary</h2>
 						<p>Slides can be nested inside of each other.</p>
 						<p>Use the <em>Space</em> key to navigate through all slides.</p>
 						<br>
@@ -140,8 +169,14 @@
 						<h2>... and GIFs!</h2>
 					</section>
 				</section>
-				<section data-background-iframe="https://hakim.se" data-background-interactive>
-					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+				<section data-background-iframe="https://www.bgs.ac.uk/" data-background-interactive>
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.9); background-color: rgba(0, 46, 64, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Iframe Backgrounds</h2>
+						<p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
+					</div>
+				</section>
+				<section data-background-iframe="https://britishgeologicalsurvey.github.io/Groundhog/" data-background-interactive>
+					<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.9); background-color: rgba(0, 46, 64, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
 						<h2>Iframe Backgrounds</h2>
 						<p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the page in the background.</p>
 					</div>
