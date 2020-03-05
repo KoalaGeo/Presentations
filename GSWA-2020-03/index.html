@@ -174,31 +174,46 @@
 						<img src="/assets/Picture2.png"  width="555" height="267">
 						<h3>NER Training Model</h3>
 						<a href="https://github.com/BritishGeologicalSurvey/geo-ner-model ">GitHub Repo</a>
+						<aside class="notes">
+						We extracted 2500 sentences from the XML and converted the mark up to a Named Entity Recognition (NER) training data format where words are classified as LEXICON or CHRONOSTRAT.  NB Today various open source and commercial tools are available to create NER training datasets by annotating unstructured text.
+						</aside>
 					</section>
 					<section>
 						<img src="/assets/Picture3.png"  width="555" height="267">
 						<h3>NER Tagging</h3>
+						<aside>We used the training data to train a custom NER tagger model using the Stanford Core NLP library, which implements a CRF (conditional random field) algorithm. Pre-trained models are available that detects people, organisations and places in unseen text.  Our custom trained model can also recognise lithostratigraphic and chronostratigrahic terms. NB alternatives to CoreNLP are available, we also tried python based spaCy, and Edinburgh Geoparser for detecting locations.  The training data and instructions to repeat this task to build the custom NER model yourself are on https://github.com/BritishGeologicalSurvey/geo-ner-model.
+						</aside>
 					</section>
 					<section>
 						<img src="/assets/Picture4.png"  width="555" height="267">
 						<h3>Entity resolving</h3>
+						<aside>As a proof of concept, we used the model to tag location, lithostratigraphy and chronostratigraphy in a sample of 140 documents: half were mixed quality pdf scans of typed biostratigraphy reports that had been pre-processed using OCR; the other half were regional geological reports where the text had been converted to word then HTML with manual correction to fix OCR errors, create standardised formatting for mentions of boreholes and grid references, and create systematic document structure.
+						</aside>
 					</section>
 					<section>
 						<img src="/assets/Picture5.png"  width="555" height="267">
 						<h3>Searching</h3>
+						<aside>We match words/phrases tagged as LEXICON or CHRONOSTRAT to values in our controlled vocabularies (BGS Lexicon and Chronostratigraphy) and identify them using Linked Data URIs (published on BGS Linked Data pages at data.bgs.ac.uk). We use fuzzy text matching based on Levenshtein distance to account for OCR errors and to resolve the domain specific stop words (Formation, Group, Period etc).
+						</aside>
 					</section>
 					<section>
 						<img src="/assets/Picture6.png"  width="555" height="267">
 						<h3>Visulising</h3>
+						<aside>6. We match words tagged as locations to values in an internal compilation of gazetteers which contains higher level place names for the world (countries, counties, cities) and detail place names for the UK (villages, physiographic features etc).  This reduces the number of false matches compared to using open street map or other gazetteers, but still requires some quality improvement. Using the gazetteer we then geoparses the location names to obtain a point geometry.
+						</aside>
 					</section>
 					<section data-background-iframe="http://194.66.252.183:81/TextMiningDemo" data-background-interactive>
 						<div style="position: absolute; width: 30%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.7); background-color: rgba(0, 46, 64, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
 							<h2>BGS Text Mined Memoir Viewer</h2>
 						</div>
+						<aside>7. We store the mined and entity matched data in a database (containing: document id, token position, entity type, vocabulary match URI or geometry) and wrote a simple API to query it which supports frequency and correlation analysis.
+						</aside>
 					</section>
 					<section>
 						<img src="/assets/Picture7.png"  width="555" height="267">
 						<h3>Analysing</h3>
+						<aside>8. We built a user interface that queries the API and details the lithostratigraphic and chronostratic terms found in each document, plots locations on a map overlaying the digital geological map, and links each vocabulary term or map to the source text snippets. Each matched entity can also launch a link to further information provided by the gazetteer or Linked Data vocabulary service.
+						</aside>
 					</section>
 				</section>
 				<section>
