@@ -96,6 +96,24 @@
 							<h2>Drawing a Cross-Section</h2>
 						</div>
 					</section>
+					<section data-background-image="https://media-exp1.licdn.com/dms/image/C4E22AQGVyi65qbcSrA/feedshare-shrink_2048_1536/0?e=1586390400&v=beta&t=8WKR8S7JIXbB6vw4CQaOv04NTHkytfKorxAXER6t07k" data-background-size=100%>
+						
+					</section>
+					<section data-background-image="https://media-exp1.licdn.com/dms/image/C4E22AQFdVaSqgi7QRA/feedshare-shrink_2048_1536/0?e=1586390400&v=beta&t=8bu4HuSE3JyhYfE0bYRjj8qGIvzQ_3_uQ1-bwxkCoC0" data-background-size=100%>
+						
+					</section>
+					<section data-background-iframe="https://britishgeologicalsurvey.github.io/Groundhog/" data-background-interactive>
+						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.9); background-color: rgba(0, 46, 64, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2>Groundhog Documentation</h2>
+							<p>Moved away from PDF to HTML. Hosted and built on Github Pages using Sphinx</p>
+						</div>
+					</section>
+					<section>
+						<h3>Further Info</h3>
+						<a href="https://www.linkedin.com/company/groundhog-geological-software/">LinkedIn</a> /
+						<a href="https://www.youtube.com/channel/UCQc4rWxP2sMPNFhHq6xOthQ">YouTube</a> /
+						<a href="https://www.bgs.ac.uk/research/environmentalModelling/groundhog/groundhogDesktop.html">BGS Website</a>						
+					</section>
 				</section>
 				<!-- GeoVisionary -->
 				<section>
@@ -121,7 +139,68 @@
 						</a>
 					</section>
 				</section>
-
+				<!-- Text Mining -->
+				<section>
+					<section>
+						<h2>Knowledge Extraction/Text Mining</h2>
+					</section>
+					<section>
+						<img src="/assets/Picture1.png"  width="555" height="267">
+						<h3>Prepare Training Data</h3>
+						<aside class="notes">
+							Manual XML markup experiments in early 2000s labelled words and phrases and tagged them as members of BGS controlled vocabularies for Lithostratigraphy (BGS Lexicon) and Chronostratigraphy.
+						</aside>
+					</section>
+					<section>
+						<h2>XML Semantic Markup Experiments (early 2000's)</h2>
+						<pre><code class="xml" data-trim data-line-numbers="1-10">
+							<para><indexterm scheme="AMF" value="425" term="Bed 
+							rock"/>Physiographic zones 1 and 2 cover the bulk 
+							of the study area. Their character is primarily 
+							controlled by bedrock type and glacial history. The 
+							highly irregular middle zone (2) is underlain by 
+							<indexterm scheme="CHRONOSTRAT" value="P" term= 
+							"PERMIAN">Permian</indexterm> and <indexterm scheme
+							="CHRONOSTRAT" value="T" term="TRIASSIC">Triassic
+							</indexterm> rocks; the Permian strata include 
+							<indexterm scheme="CHRONOSTRAT" value="PU" term=
+							"LATE PERMIAN">Upper Permian</indexterm> <indexterm 
+							scheme="LEXICON" value="ZG" term="ZECHSTEIN GROUP">
+							Zechstein</indexterm> sedimentary rocks that locally
+							crop out in the study area.</indexterm></para>
+						</code></pre>
+					</section>
+					<section>
+						<img src="/assets/Picture2.png"  width="555" height="267">
+						<h3>NER Training Model</h3>
+						<a href="https://github.com/BritishGeologicalSurvey/geo-ner-model ">GitHub Repo</a>
+					</section>
+					<section>
+						<img src="/assets/Picture3.png"  width="555" height="267">
+						<h3>NER Tagging</h3>
+					</section>
+					<section>
+						<img src="/assets/Picture4.png"  width="555" height="267">
+						<h3>Entity resolving</h3>
+					</section>
+					<section>
+						<img src="/assets/Picture5.png"  width="555" height="267">
+						<h3>Searching</h3>
+					</section>
+					<section>
+						<img src="/assets/Picture6.png"  width="555" height="267">
+						<h3>Visulising</h3>
+					</section>
+					<section data-background-iframe="http://194.66.252.183:81/TextMiningDemo" data-background-interactive>
+						<div style="position: absolute; width: 30%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.7); background-color: rgba(0, 46, 64, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2>BGS Text Mined Memoir Viewer</h2>
+						</div>
+					</section>
+					<section>
+						<img src="/assets/Picture7.png"  width="555" height="267">
+						<h3>Analysing</h3>
+					</section>
+				</section>
 				<section>
 					<section id="fragments">
 						<h2>Fragments</h2>
@@ -194,20 +273,14 @@
 				<section>
 					<h2>Pretty Code</h2>
 					<pre><code class="hljs" data-trim data-line-numbers="4|9|4,8-11">
-import React, { useState } from 'react';
-
-function Example() {
-	const [count, setCount] = useState(0);
-
-	return (
-	&lt;div&gt;
-		&lt;p&gt;You clicked {count} times&lt;/p&gt;
-		&lt;button onClick={() =&gt; setCount(count + 1)}&gt;
-		Click me
-		&lt;/button&gt;
-	&lt;/div&gt;
-	);
-}
+						<ab>
+							<para>The physiography of the offshore area can be broadly divided into three zones:</para>
+							<orderedlist>
+								<listitem>An inner (coastal-nearshore) zone, ranging from 5-20 km wide and including the mouth of the Tay estuary. The bathymetric contours are generally smooth and reflect a seaward dipping seabed of variable, albeit gentle, gradient down to a water depth of about 50 m.</listitem>
+								<listitem>A middle zone of highly irregular bathymetry, which reflects a channelised sea bed with locally rapid variation in water depth between 60 and 120 m. The trend of the channels is very variable (Figure <link linkend="ir_04_178_f005" type="figref">5</link>). These features are described further in section 5.2.1.</listitem>
+								<listitem>An outer zone where the bathymetric contours become much smoother, reflecting a generally more flat-lying to gently mounded sea bed with water depths in the range of 60 to 80 m.</listitem>
+							</orderedlist>
+						</ab>
 					</code></pre>
 					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
 				</section>
