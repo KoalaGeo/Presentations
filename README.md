@@ -12,4 +12,4 @@ Examples
 
 [GSWA - March 2020](https://koalageo.github.io/presentations/GSWA-2020-03/)
 
-[GSQ - March 2020]()
+[GSQ - March 2020](https://koalageo.github.io/presentations/GSQ-2020-03/))
