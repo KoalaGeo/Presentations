@@ -13,3 +13,5 @@ A repo of presentations!
 [GSNSW - April 2021](https://koalageo.github.io/presentations/GSNSW-2021-04)
 
 [NZPAM - April 2021](https://koalageo.github.io/presentations/NZPAM-2021-05)
+
+[OGC UK & Ireland Forum December 2021](https://koalageo.github.io/presentations/OGC-2021-12)
