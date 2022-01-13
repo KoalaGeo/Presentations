@@ -15,3 +15,5 @@ A repo of presentations!
 [NZPAM - April 2021](https://koalageo.github.io/presentations/NZPAM-2021-05)
 
 [OGC UK & Ireland Forum December 2021](https://koalageo.github.io/presentations/OGC-2021-12)
+
+[European Surveys Jan 2022](https://koalageo.github.io/presentations/eurgeosurveys-2022-01)
