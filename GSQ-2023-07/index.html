@@ -8,13 +8,13 @@
 
 		<meta name="description" content="Geology">
 		<meta name="author" content="Edward Lewis">
-	
+
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/bgsold.css">
+		<link rel="stylesheet" href="css/theme/bgs.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -38,12 +38,12 @@
 	<body>
 		<div class="reveal">
 			<div class='footer'>
-				<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/bgsclr.png"  width="100">
+				<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/BGS-Icon-Compact-Rev-RGB-01.png"  width="100">
 				</div>
 			<div class="slides">
 				<!-- Title -->
 				<section id="title">
-					<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/BGS_Logo_magenta.png"  width="555">
+					<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/BGS-Logo-Rev-RGB-01.png"  width="555">
 				</section>
 				<section id="acknowledgement">
 					<h2>Acknowledgement</h2>
@@ -56,11 +56,10 @@
 				<section>
 					<section id="info">
 						<h2>Who am I?</h2>
-						<p class="fragment fade-in-then-semi-out"><small>Not an existential question...</small></p>
-						<p class="fragment">Edd Lewis</p>
-						<p class="fragment">BGS Geologist/Standards Lead (& FOSS advocate)</p>
-						<p class="fragment">10 years in MinEx/Mining (>5 in Australia)</p>
-						<p class="fragment">5 years in Government (Data StandardsCapacity Building/Mineral Promotion/Resource Policy)</p>
+						<p>Edd Lewis</p>
+						<p>BGS Open Standards Lead (& FOSS advocate)</p>
+						<p>10 years in MinEx/Mining (>5 in Australia)</p>
+						<p>5 years in Government (Data Standards & Governance/Capacity Building/Mineral Promotion/Resource Policy)</p>
 						<a href="mailto:edlew@bgs.ac.uk?subject=GSWA" target="_top">edlew@bgs.ac.uk</a>
 						<a href="https://twitter.com/Geologist_Edd?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a class="github-button" href="https://github.com/koalageo" aria-label="Follow @koalageo on GitHub">Follow @koalageo</a>
 						<aside class="notes">
@@ -79,7 +78,44 @@
 							<li>Offices at Keyworth, Wallingford, Edinburgh & Cardiff</li>
 						</ul>
 						<aside class="notes">
-							50% direct Gov funding
+							50% direct Gov funding, 40% Research funding, 10% Commercial incl data sales
+						</aside>
+					</section>
+					<section id="bgs">
+						<h2>BGS</h2>
+						<ul>
+							<li>Work with Gov, Academia & Industry</li>
+							<li>Central Government Advice</li>
+							<li>Services to agencies/statutory bodies - Network Rail, Environment Agency</li>
+							<li>Services to local gov - Brownfield development, mineral planning</li>
+						</ul>
+						<aside class="notes">
+							50% direct Gov funding, 40% Research funding, 10% Commercial incl data sales
+						</aside>
+					</section>
+					<section id="bgs">
+						<h2>National Geoscience Data Centre</h2>
+						<ul>
+							<li>All data funded by NERC</li>
+							<li>Voluntary data deposits - Geotech drilling, Aggregates Production</li>
+							<li>Statutory data deposits - Minerals drilling</li>
+							<li>Geology</li>
+						</ul>
+						<aside class="notes">
+							50% direct Gov funding, 40% Research funding, 10% Commercial incl data sales
+						</aside>
+					</section>
+					<section id="bgs">
+						<h2>Commercial Data Services</h2>
+						<ul>
+							<li>10k & 50k Geology</li>
+							<li>Value Added Data Products</li>
+							<li>Geosure</li>
+							<li>Geoclimate</li>
+							<li>Brownfield Site Development Cost Estimation</li>
+						</ul>
+						<aside class="notes">
+							50% direct Gov funding, 40% Research funding, 10% Commercial incl data sales
 						</aside>
 					</section>
 				</section>
@@ -90,123 +126,62 @@
 					<p class="fragment fade-in-then-semi-out">BGS•Σigma</p>
 					<p class="fragment fade-in-then-semi-out">Groundog Desktop</p>
 					<p class="fragment fade-in-then-semi-out">Text Mining</p>
-					<p class="fragment fade-in-then-semi-out">UKGEOS</p>
-					<p class="fragment fade-in-then-semi-out">Standards & Bits</p>
+					<p class="fragment fade-in-then-semi-out">Sensor Data</p>
+					<p class="fragment fade-in-then-semi-out">OGCAPI</p>
+					<p class="fragment fade-in-then-semi-out">Other</p>
 					<aside class="notes">
 						A selection of current BGS projects
 					</aside>
+				</section>
+				<section>
+					<h4>BGS IT Infrastructure</h4>
+					<ul>
+					<li>Self-hosted virtual machines running on premises</li>
+					<li>Long-standing corporate Oracle database</li>
+					<li>Increasing use of PostgreSQL for microservices and collaborative projects</li>
+					</ul>
+				<aside data-markdown class="notes">
+					Self-hosting our VMs means that we do not pay per minute; it is not expensive to run multiple servers with low loads.
+					Microservices often include their own PostgreSQL databases as part of the software stack.
+					If we use PostgreSQL, we can share workflows with partners in academia or countries such as Kyrgyzstan and Uganda.
+				</aside>
 				</section>
 				<section>
 					<section>
 						<h2>Generic Digital Workflow</h2>
 						<p>GeoVisionary > SIGMA > GroundHog</p>
 						<p><strong>Central Data Store</strong></p>
-						<img width="50%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gdw.png">
+						<img width="50%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/gdw.png">
 						<aside class="notes">
 							Customisable to fit needs of organisation.
 							the central data store is backbone to the whole workflow and essential requirement for an organisation
 
 						</aside>
 					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gdw2.png" data-background-size=80%>
+					<section>
+						<h2>Mapping</h2>
+						<p>Focus on 50k</p>
+						<p>Generally undertaken only as part of other commercial projects</p>
+						<p>Want to make a single Best Available scale map using the 10k, 50k & 250k mapping</p>
+						<aside class="notes">
+							Less overhead & maintance than multiple scales
+						</aside>
+					</section>
+					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/gdw2.png" data-background-size=80%>
 						
 					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gdw3.png" data-background-size=80%>
+					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/gdw3.png" data-background-size=80%>
 						
 					</section>
-				</section>
-				<!-- GeoVisionary -->
-				<section id="geovisionary">
 					<section>
-						<h2>GeoVisionary</h2>
-						<p>First immersive 3D Visualisation Facility</p> 
-						<p>February 2005</p>
-						<p>Virtalis Stereoworks</p>
-						<p>Christie projector: 1400 x1050 pixels @ 100Hz, 4000 lumens</p>
-						<p>Main use: display of 3D models from Digital Geoscience Spatial Model Programme</p>
-					</section>
-					<section>
-						<h2>GeoVisionary</h2>
-						<br>
-						<img width="40%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv1.jpg">
-					</section>
-					<section>
-						<h2>GeoVisionary</h2>
-						<p>Originated in BGS – Virtalis R&D collaboration<br>
-							October 2006: VFR – virtual field reconnaissance – improve results and efficiency of fieldwork using VR technology<br>
-							Solved the problem of utilising BIG datasets – terabytes of terrain and imagery
-						</p>
-					</section>
-					<section>
-						<h2>Data Integration</h2>
-						<p>Real value realised when data are integrated and interpreted as one</p>
-						<p>Combine any resolution of elevation data with:
-							imagery, 3D geological models, GIS layers, CAD models, etc
-							seamless movement through the datasets <br>
-							Supports time<br>
-							Virtual geological toolkit enables geoscientists to analyse and interpret data
-						</p>
-					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv7.jpg" data-background-size=80%>
+						<h2>Final Outputs</h2>
+						<p> Data!</p>
+						<p>No longer produce physical maps - can order from shop & are printed on demand</p>
+						<p>Available as downloads or web services / API's</p>
 						<aside class="notes">
-							Headsets - the future?
+							No demand for print maps from users
+
 						</aside>
-					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv8.jpg" data-background-size=80%>
-						<aside class="notes">
-							Headsets - the future?
-						</aside>
-					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv9.jpg" data-background-size=80%>
-						<aside class="notes">
-							Headsets - the future?
-						</aside>
-					</section>
-					<section data-background-iframe="https://www.virtalis.com/products/geovisionary/" data-background-interactive>
-						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-							<h2>GeoVisionary</h2>
-						</div>
-					</section>
-					<section>
-						<h2>Headsets</h2>
-						<p>Useful low cost visualisation<br>
-							Immersive<br>
-							Not so good for working together…
-							</p>
-						<img height="40%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv4.jpg">
-					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv2.jpg" data-background-size=80%>
-						
-					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv3.jpg" data-background-size=80%>
-						<aside class="notes">
-							Headsets - the future?
-						</aside>
-					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv5.jpg" data-background-size=80%>
-						<aside class="notes">
-							Headsets - the future?
-						</aside>
-					</section>
-					<section data-background-image="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gv6.jpg" data-background-size=80%>
-						<aside class="notes">
-							Headsets - the future?
-						</aside>
-					</section>
-					<section>
-						<h2>Headsets</h2>
-						<p>Great working environment to understand, interpret and communicate complex 3D information – a common visual language<br>
-							Greatly increased fieldwork efficiency – make better, faster decisions<br>
-							Impressive for presentations
-							</p>
-					</section>
-					<section>
-						<h2>Further Info</h2>
-						<a href="mailto:brn@bgs.ac.uk?subject=Sigma" target="_top">Bruce Napier (Product Manager): brn@bgs.ac.uk</a><br>
-						<a href="https://www.bgs.ac.uk/research/environmentalModelling/3dVisualisation.html">https://www.bgs.ac.uk/research/environmentalModelling/3dVisualisation.html</a><br>
-						<a href="https://www.virtalis.com/products/geovisionary/">https://www.virtalis.com/products/geovisionary/</a>
-						<br>
-						<p>Training/Customisation/Development</p>
 					</section>
 				</section>
 				<!-- BGS Sigma -->
@@ -214,7 +189,7 @@
 					<section>
 						<h2>BGS•Σigma</h2>
 						<p>Integrated tool kit for digital geological data capture</p>
-						<img width="40%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Sierra_Leone.png">
+						<img width="40%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Sierra_Leone.png">
 						<p>Price: <strong>Free!</strong></p>
 						<aside class="notes">
 							Released 2015, based on ArcGIS ArcMap with a relational database back end.
@@ -233,21 +208,21 @@
 					</section>
 					<section>
 						<h2>BGS•Σigma</h2>
-						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/sigmamob.png">
+						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/sigmamob.png">
 						<aside class="notes">
 							entry of field observation points along with linked data, Map face notes, Polygon seeds for polygon generation in BGS·SIGMAdesktop, Field report generator — collates user-defined data into an MS Word document
 						</aside>
 					</section>
 					<section>
 						<h2>BGS•Σigma</h2>
-						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/sigmamob2.png">
+						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/sigmamob2.png">
 						<aside class="notes">
 							
 						</aside>
 					</section>
 					<section>
 						<h2>SIGMAdesktop</h2>
-						<img data-src="https://www.bgs.ac.uk/research/sigma/images/SIGMA1.jpg">
+						<img data-src="images/careers_p668807-960x497.jpg">
 						<aside class="notes">
 							From this to this
 						</aside>
@@ -270,114 +245,120 @@
 						<h2>BGS•SIGMate</h2>
 						<strong>Coming Soon!</strong>
 						<br>
-						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/geo.png">
+						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/geo.png">
 						<aside class="notes">
 							Due 2020, cross platform iOS, Android, Windows, intgrates with Arc or QGIS. Name not confirmed. Saw limitations with other offerings nothing offered n:n relationships, single point with multiple features (description/photo/sketch/structural measurement)
 						</aside>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_01.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_01.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_02.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_02.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_03.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_03.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_04.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_04.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_05.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_05.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_06.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_06.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_07.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_07.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_08.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_08.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_09.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_09.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_10.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_10.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_11.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_11.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_12.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_12.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_13.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_13.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_14.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_14.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_15.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_15.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_16.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_16.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_17.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_17.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_18.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_18.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_19.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_19.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_20.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_20.png">
 						<br>
 					</section>
 					<section>
 						<h2>A taster</h2>
-						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Screenshot_21.png">
+						<img height="500" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/Screenshot_21.png">
+						<br>
+					</section>
+					<section>
+						<h2>Under Evaluation</h2>
+						<p>ArcGIS Field Maps</p>
+						<img height="500" data-src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/products/arcgis-field-maps/assets/arcgis-fieldmaps-banner-fg.png">
 						<br>
 					</section>
 					<section>
@@ -409,7 +390,7 @@
 						<p>Community & Professional Editions</p>
 						<p>Price: <strong>Free! (Community edition)</strong></p>
 						<aside class="notes">
-							Colab, we build, add features at request & funding
+							Colab, we build, add features on request (funding)
 						</aside>
 					</section>
 					<section data-background-image="https://britishgeologicalsurvey.github.io/Groundhog/_images/image37.png" data-background-size=80%>
@@ -417,14 +398,14 @@
 					</section>
 					<section>
 						<h2>Boreholes</h2>
-						<img height="350" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gh1.PNG">
+						<img height="350" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/gh1.PNG">
 						<aside class="notes">
 							If you’ve been looking for a simple way to explore and present your borehole data then Groundhog is for you! Import site borehole data from a range of formats (TXT, CSV, AGS) or enter it directly in Groundhog.Import site borehole data from a range of formats (TXT, CSV, AGS) or enter it directly in Groundhog.Easily create customised borehole log report templates and share them with other Groundhog users.Explore your in-situ and lab test data with the built-in support for AGS 3.1 and 4. Visualise composite geophysical logs using the LAS importer. 						
 						</aside>
 					</section>
 					<section>
 						<h2>Cross Sections</h2>
-						<img height="50%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gh2.PNG">
+						<img height="50%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/gh2.PNG">
 						<aside class="notes">
 							Construct detailed geological cross-sections, to scale, using the simple drawing tools. Import site elevation grids, or use the built-in 250m UK OS Open DTM, to automatically generate topographic elevation proles. Import and display images such as geophysical proles or conceptual sketches. 6 Include or buffer boreholes into the cross-section and display using any log template 						
 						</aside>					
@@ -432,21 +413,10 @@
 					<section>
 						<h2>Implicit 3D Modelling</h2>
 						<p>Only interpolation engine geared to shallow quaternary deposits</p>
-						<img height="350" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/gh3.PNG">
+						<img height="350" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/gh3.PNG">
 						<aside class="notes">
 							Only availabler in professional edition for which there is a low cost licence fee. If you’ve been looking for a simple way to explore and present your borehole data then Groundhog is for you! Import site borehole data from a range of formats (TXT, CSV, AGS) or enter it directly in Groundhog.Import site borehole data from a range of formats (TXT, CSV, AGS) or enter it directly in Groundhog.Easily create customised borehole log report templates and share them with other Groundhog users.Explore your in-situ and lab test data with the built-in support for AGS 3.1 and 4. Visualise composite geophysical logs using the LAS importer. 						
 						</aside>
-					</section>
-					<section data-background-image="https://media-exp1.licdn.com/dms/image/C4E22AQGVyi65qbcSrA/feedshare-shrink_2048_1536/0?e=1586390400&v=beta&t=8WKR8S7JIXbB6vw4CQaOv04NTHkytfKorxAXER6t07k" data-background-size=100%>
-						
-					</section>
-					<section data-background-image="https://media-exp1.licdn.com/dms/image/C4E22AQFdVaSqgi7QRA/feedshare-shrink_2048_1536/0?e=1586390400&v=beta&t=8bu4HuSE3JyhYfE0bYRjj8qGIvzQ_3_uQ1-bwxkCoC0" data-background-size=100%>
-						
-					</section>
-					<section data-background-iframe="https://www.youtube.com/embed/sYC1AYZvqio" data-background-interactive>
-						<div style="position: absolute; width: 30%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-							<h2>Drawing a Cross-Section</h2>
-						</div>
 					</section>
 					<section data-background-iframe="https://britishgeologicalsurvey.github.io/Groundhog/" data-background-interactive>
 						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(255, 255, 255, 0.7); background-color: rgba(255, 255, 255, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
@@ -466,132 +436,17 @@
 							Only available in professional edition for which there is a small licence fee (£500 for 1 user). If you’ve been looking for a simple way to explore and present your borehole data then Groundhog is for you! Import site borehole data from a range of formats (TXT, CSV, AGS) or enter it directly in Groundhog.Import site borehole data from a range of formats (TXT, CSV, AGS) or enter it directly in Groundhog.Easily create customised borehole log report templates and share them with other Groundhog users.Explore your in-situ and lab test data with the built-in support for AGS 3.1 and 4. Visualise composite geophysical logs using the LAS importer. 						
 						</aside>
 					</section>
-				</section>
-				<!-- Text Mining -->
-				<section id="textmining">
 					<section>
-						<h2>Knowledge Extraction</h2>
-						<p class="fragment fade-in-then-semi-out">Team: Rachel Heaven, Simon Burden,  Bob McIntosh, Ike Nkisi-Orji, Marcus Sen, Jo Walsh</p>
-						<h3 class="fragment fade">Goal</h3>
-						<p class="fragment fade-in-then-semi-out">Extract stratigraphic entities and observation locations from unstructured text</p>
+						<h3>Further Modelling</h3>
+						<p>Primarily use GoCAD</p>
+						<p>Models generally shared as files directly with users/3DPDF</p>
+						<p>Looking to move to glTF or Voxel models</p>
+						<p>Build visualisation tool / portal using ESRI API</p>		
 					</section>
 					<section>
-						<h3 class="fragment fade">Intended benefits:</h3>
-						<p class="fragment fade-in-then-semi-out">Interpreted map and model products can contain links to observed data points and conceptual ideas, presenting model uncertainty and provenance</p>
-						<p class="fragment fade-in-then-semi-out">Stratigraphy of an area of interest can be quickly understood from pre-existing literature, saving experts’ time</p>
-						<p class="fragment fade-in-then-semi-out">Explicit and implicit stratigraphic relations can be captured into reusable data for modelling constraints</p>
-					</section>
-					<section>
-						<h2>1. XML Semantic Markup Experiments (early 2000's)</h2>
-						<pre><code class="xml" data-trim data-line-numbers="1-10">
-							<para><indexterm scheme="AMF" value="425" term="Bed 
-							rock"/>Physiographic zones 1 and 2 cover the bulk 
-							of the study area. Their character is primarily 
-							controlled by bedrock type and glacial history. The 
-							highly irregular middle zone (2) is underlain by 
-							<indexterm scheme="CHRONOSTRAT" value="P" term= 
-							"PERMIAN">Permian</indexterm> and <indexterm scheme
-							="CHRONOSTRAT" value="T" term="TRIASSIC">Triassic
-							</indexterm> rocks; the Permian strata include 
-							<indexterm scheme="CHRONOSTRAT" value="PU" term=
-							"LATE PERMIAN">Upper Permian</indexterm> <indexterm 
-							scheme="LEXICON" value="ZG" term="ZECHSTEIN GROUP">
-							Zechstein</indexterm> sedimentary rocks that locally
-							crop out in the study area.</indexterm></para>
-						</code></pre>
-						<aside class="notes">
-							Manual XML markup experiments in early 2000s labelled words and phrases and tagged them as members of BGS controlled vocabularies for Lithostratigraphy (BGS Lexicon) and Chronostratigraphy.
-						</aside>
-					</section>
-					<section>
-						<h2>2. Converted to training data</h2>
-						<pre><code class="xml" data-trim data-line-numbers="8,12,15,16">
-							highly 0
-							irregular 0 
-							middle 0 
-							zone 0
-							is 0
-							underlain 0
-							by 0
-							Permian CHRONOSTRAT
-							Triassic 0
-							rocks 0
-							the 0
-							Permian CHRONOSTRAT
-							strata 0
-							include 
-							Upper Permian CHRONOSTRAT
-							Zechstein LEXICON
-							sedimentary 0
-						</code></pre>
-						<aside class="notes">
-							We extracted 2500 sentences from the XML and converted the mark up to a Named Entity Recognition (NER) training data format where words are classified as LEXICON or CHRONOSTRAT.  NB Today various open source and commercial tools are available to create NER training datasets by annotating unstructured text.
-						</aside>
-					</section>
-					<section>
-						<h3>3. Train a custom Named Entity Recognition (NER) model for strategraphic terms</h3>
-						<a href="https://github.com/BritishGeologicalSurvey/geo-ner-model ">BGS GitHub Repo</a>
-						<pre><code class="xml" data-trim data-line-numbers="1-3">
-							java -cp <standford-ner class="jar"></standford-ner>
-							edu.stanford.nlp.ie.crf.CRFClassifier - 
-							prop <bgs class="3class geo prop"></bgs>
-						</code></pre>
-						<aside class="notes">
-							We used the training data to train a custom NER tagger model using the Stanford Core NLP library, which implements a CRF (conditional random field) algorithm. Pre-trained models are available that detects people, organisations and places in unseen text.  Our custom trained model can also recognise lithostratigraphic and chronostratigrahic terms. NB alternatives to CoreNLP are available, we also tried python based spaCy, and Edinburgh Geoparser for detecting locations.  The training data and instructions to repeat this task to build the custom NER model yourself are on https://github.com/BritishGeologicalSurvey/geo-ner-model.
-						</aside>
-					</section>
-					<section>
-						<h3>4. Run text mining using custom NER model for stratigraphy and core NER locations</h3>
-						<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Picture3.png"  width="600">
-
-						<aside class="notes">
-							As a proof of concept, we used the model to tag location, lithostratigraphy and chronostratigraphy in a sample of 140 documents: half were mixed quality pdf scans of typed biostratigraphy reports that had been pre-processed using OCR; the other half were regional geological reports where the text had been converted to word then HTML with manual correction to fix OCR errors, create standardised formatting for mentions of boreholes and grid references, and create systematic document structure.
-						</aside>
-					</section>
-					<section>
-						<h3>5. Stratigraphy entities matched to BGS Linked Data Vocabs</h3>
-						<aside class="notes">
-							We match words/phrases tagged as LEXICON or CHRONOSTRAT to values in our controlled vocabularies (BGS Lexicon and Chronostratigraphy) and identify them using Linked Data URIs (published on BGS Linked Data pages at data.bgs.ac.uk). We use fuzzy text matching based on Levenshtein distance to account for OCR errors and to resolve the domain specific stop words (Formation, Group, Period etc).
-						</aside>
-					</section>
-					<section>
-						<h3>6. Locations resolved to geometry using gazetteer</h3>
-						<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Picture4.png"  width="600">
-												
-						<aside class="notes">
-							We match words/phrases tagged as LEXICON or CHRONOSTRAT to values in our controlled vocabularies (BGS Lexicon and Chronostratigraphy) and identify them using Linked Data URIs (published on BGS Linked Data pages at data.bgs.ac.uk). We use fuzzy text matching based on Levenshtein distance to account for OCR errors and to resolve the domain specific stop words (Formation, Group, Period etc).
-						</aside>
-					</section>
-					<section>
-						<h3>7. Database of mined data with API</h3>
-						<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Picture5.png"  width="600">
-
-						<aside class="notes">
-							We store the mined and entity matched data in a database (containing: document id, token start and end position, entity type, vocabulary match URI or geometry) and wrote a simple API to query it.
-						</aside>
-					</section>
-					<section data-background-iframe="http://194.66.252.183:81/TextMiningDemo/B01879/" data-background-interactive>
-						<div style="position: absolute; width: 30%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.7); background-color: rgba(0, 46, 64, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-							<h2>8. Marked up text linked to map</h2>
-							<a href="http://194.66.252.183:81/TextMiningDemo/B01839/" target="_top">Link if background doesn't load - http://194.66.252.183:81/TextMiningDemo/B01839/</a>
-						</div>
-						<aside class="notes">
-							We built a user interface that queries the API and details the lithostratigraphic and chronostratic terms found in each document, plots locations on a map overlaying the digital geological map, and links each vocabulary term or map to the source text snippets. Each matched entity can also launch a link to further information provided by the gazetteer or Linked Data vocabulary service.
-						</aside>
-					</section>
-					<section>
-						<a href="http://194.66.252.183:81/TextMiningDemo/B01839/" target="_top">Link if background on previous slide didn't load - http://194.66.252.183:81/TextMiningDemo/B01839/</a>
-						<aside class="notes">
-							We built a user interface that queries the API and details the lithostratigraphic and chronostratic terms found in each document, plots locations on a map overlaying the digital geological map, and links each vocabulary term or map to the source text snippets. Each matched entity can also launch a link to further information provided by the gazetteer or Linked Data vocabulary service.
-						</aside>
-					</section>
-					<section>
-						<h3>9. API supports frequency and corrolation analysis</h3>
-						<img src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/Picture7.png"  width="600">
-						
-						<aside class="notes">
-							The API querying the matched entities database supports term frequency plots, synthetic “generalised vertical section” and simple correlation analysis based on character distance in text. Further work can be done here to analyse the text for the nature of the correlations, hopefully extracting explicit descriptions of stratigraphic relations such as “overlies”, “deposited unconformably on” etc, and relating stratigraphies to the locations they were observed at.
-						</aside>
+						<h3>Loop Project</h3>
+						<img src="https://loop3d.org/assets/images/loop/loop.svg"  width="400">
+						<p class="fragment fade-in-then-semi-out">Involved in WP1 & WP2 knowledge extraction work</p>	
 					</section>
 				</section>
 				<!-- UKGEOS -->
@@ -615,16 +470,49 @@
 						<aside class="notes">
 							UK Geonergy Observatories are open to the UK and international science communities. Core, Core Scans, Text instruments/tools
 						</aside>
+					</section>					
+				</section>
+				<!-- Sensor Data -->
+				<section id="Sensors">
+					<section>
+						<img class="stretch" src="images/glasgow_main_mine_working.png">
+						<a href="https://ukgeos.ac.uk/observatories/glasgow">UK Geoenergy Observatories</a>
+					<aside data-markdown class="notes">
+						For the UKGEOS project, we have placed instruments down boreholes to create natural laboratories.
+						UKGEOS Glasgow is investigating the use of water in abandoned coal mines to heat homes in a similar way to a ground source heat pump.
+					</aside>
 					</section>
-					<section data-background-iframe="https://www.ukgeos.ac.uk/digital-science-lab" data-background-interactive>
-						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.7); background-color: rgba(0, 46, 64, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-							<h2>Digital Science Lab</h2>
-						</div>
-						<aside class="notes">
-							Trying to do more collab research, rather than public needing to wait till end of the project to see results/publications. 
+					<section>
+						<img class="stretch" src="images/sensor_data_graph.png">
+						<a href="https://sensors.bgs.ac.uk">sensors.bgs.ac.uk</a>
+					<aside data-markdown class="notes">
+						The BGS Sensor Data Service allows the data to be accessed via an api.
+						It is powered by FROST-Server, which is an open-source project serving the data via the Open Geospatial Consortium's SensorThings API standard.
+						
+						FROST-Server makes use of PostgreSQL's JSON store and the PostGIS extension for spatial data.
+				
+						+ [API root](https://sensors.bgs.ac.uk/FROST-Server/v1.1)
+						+ [Observed properties include water temperature](https://sensors.bgs.ac.uk/FROST-Server/v1.1/ObservedProperties)
+						+ [Datastreams for water temperature in different locations](https://sensors.bgs.ac.uk/FROST-Server/v1.1/ObservedProperties(3)/Datastreams)
+						+ [Observations for borehole GGA07](https://sensors.bgs.ac.uk/FROST-Server/v1.1/Datastreams(20)/Observations)
+				
+						The water temperature is around 11°C.
+					</aside>
+					</section>
+					<section data-transition="fade-in" data-background-size="contain" data-background="images/007_replication_test.png">
+						<aside data-markdown class="notes">
+							Here we have added a third development server.
+							We have also added a second PostgreSQL database in each server.
+							This allows us to use Dev2 and Dev3 to test the replication scripts.
+					
+							In this case we didn't need to add a whole extra server, we just add a new database to the existing PostgreSQL clusters.
+							The new databases are created by copying the main database as soon as the tables have been created by FROST.
+							At this point they are empty and available for futher configuration with Flyway.
+					
+							We now have 10 PostgreSQLs.  I think that's enough.
 						</aside>
 					</section>
-				</section>
+				</section>	
 				<!-- Standards -->
 				<section id="standards">
 					<section>
@@ -635,7 +523,7 @@
 					</section>
 					<section>
 						<h2>Standards Timeline</h2>
-						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/standardstimebgs.png">
+						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/standardstimebgs.png">
 						<aside class="notes">
 							Where we are & where we'd like to get to 
 						</aside>
@@ -647,6 +535,82 @@
 						<img width="178" data-src="https://www.geopackage.org/img/geopkg.png" alt="GeoPackage">
 						<p>Starting to also receive GeoPackage with data requests</p>
 						<a href="http://switchfromshapefile.org/" target="_top">http://switchfromshapefile.org/</a>
+					</section>
+					<section>
+						<h2>GIS Data</h2>
+						<p>Deployment of pygeoapi - OGCAPI-Features</p>
+						<p>More datasets coming soon - WFS > OGCAPI-Features</p>
+						<a href="https://osgeodev.bgs.ac.uk/pygeoapi/" target="_top">https://osgeodev.bgs.ac.uk/pygeoapi/</a>
+						<img width="400" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/pygeoapi.png" alt="pygeoapi">
+					</section>
+					<section>
+						<h2>OGCAPI-Features</h2>
+						<ul>
+							<li>Initially our OGL Data Products</li>
+							<li>Supported on ESRI & QGIS</li>
+							<li>Needed to run as infrastructure as code</li>
+							<li>Use our private cloud infrastructure on Kubenetes</li>
+							<li>pygeoapi selected for the task</li>
+						</ul>
+						<aside class="notes">
+							broad dev community, included other ogcapi standards, python based, stateless
+						</aside>
+					</section>
+					<section>
+						<h2>Architecture</h2>
+						<img width="90%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/OGC-2021-12/assets/pygeoapiarcit.JPG">
+						<aside class="notes">
+							50% direct Gov funding, 40% Research funding, 10% Commercial incl data sales
+						</aside>
+					</section>
+					<section>
+						<h2>Architecture</h2>
+						<img width="90%" data-src="https://pygeoapi.io/presentations/default/static/pygeoapi-arch1.png">
+						<aside class="notes">
+							50% direct Gov funding, 40% Research funding, 10% Commercial incl data sales
+						</aside>
+					</section>
+					<section data-background-iframe="https://ogcapi.bgs.ac.uk" data-background-interactive>
+						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2>BGS Instance</h2>
+							<p>Our pygeoapi server</p>
+						</div>
+						<aside class="notes">
+							updated jinja templates
+						</aside>
+					</section>
+					<section>
+						<h2>pygeoapi Summary</h2>
+						<ul>
+							<li>Easy to setup</li>
+							<li>Lightweight</li>
+							<li>Customisable</li>
+							<li>Supports multiple OGCAPI standards</li>
+							<li>Well supported dev community</li>
+						</ul>
+						<aside class="notes">
+							5 out of 5 recommend
+						</aside>
+					</section>
+					<section>
+						<h2>Vector Tiles</h2>
+						<p>Testing Production of Vector Tiles</p>
+						<p>Advantages over WMS in speed & flexibility</p>
+						<p>Using Tippecanoe, pg_tileserv & ESRI</p>
+						<aside class="notes">
+							Watching for edgeeffects and simplification
+						</aside>
+					</section>
+					<section>
+						<h2>AGS Borehole Data</h2>
+						<p>Working with AGS data format committee on a AGS data validator - API & GUI</p>
+						<br>
+						<a href="https://gitlab.com/ags-data-format-wg/ags-python-library" target="_top">Python Libary repo</a>
+						<p>Will build generic framework based on FastAPI so can be reskinned for multiple deployents. Support for alternative versions like AGS-Australia on roadmap</p>
+						<br>
+						<aside class="notes">
+							Setup by employee from Fugro in  US to validate and convert AGS files. As non previously turns out no software makes fully complient AGS files. Therefore won't intgrate in data injestion process for few years. 
+						</aside>
 					</section>
 					<section>
 						<h2>Tools</h2>
@@ -666,56 +630,9 @@
 					<section>
 						<h2>BGS Data</h2>
 						<br>
-						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/SLYR.gif">
+						<img data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/NZPAM-2021-05/assets/SLYR.gif">
 						<p>Errors due to CRS (OSGB36) but styling is correct</p>
-					</section>
-					<section>
-						<h2>Reports/Publicationas</h2>
-						<p>Moving to Digital First - HTML</p>
-						<br>
-						<p>PDF publications have left us with significant legacy issues.</p>
-						<p>HTML UK Gov publishing standard</p>
-						<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_top">HTML vs PDF</a>
-						<aside class="notes">
-							Authors will still work in word, but doc will be converted to HTML for publishing.  
-						</aside>
-					</section>
-					<section data-background-iframe="https://terria.io/" data-background-interactive>
-						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.7); background-color: rgba(0, 46, 64, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-							<h2>Portals</h2>
-							<p>Reviewing TerriaJS</p>
-						</div>
-						<aside class="notes">
-							FOSS Portal Options, currently tied to ESRI 
-						</aside>
-					</section>
-					<section data-background-iframe="https://geonetwork-opensource.org/" data-background-interactive>
-						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.7); background-color: rgba(0, 46, 64, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-							<h2>Metadata</h2>
-							<p>Updated to latest version of GeoNetwork</p>
-						</div>
-						<aside class="notes">
-							
-						</aside>
-					</section>
-					<section data-background-iframe="http://geomodels.auscope.org.au/" data-background-interactive>
-						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0, 46, 64, 0.7); background-color: rgba(0, 46, 64, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-							<h2>3D Data</h2>
-							<p>Want to move away from 3DPDF</p>
-							<p>Looking to publish in glTF</p>
-							<p>Reviewing OGC 3D Tiles</p>
-						</div>
-						<aside class="notes">
-								
-						</aside>
-					</section>
-					<section>
-						<h2>BGS Version</h2>
-						<p>Only took 6 days!</p>
-						<br>
-						<img width="40%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/portal3.png">
-						<img width="40%" data-src="https://raw.githubusercontent.com/KoalaGeo/presentations/gh-pages/GSWA-2020-03/assets/portal1.png">
-					</section>
+					</section>					
 				</section>
 				<!-- Wrap up -->
 				<section id="wrapup">
