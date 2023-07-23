@@ -8,6 +8,8 @@ A repo of presentations!
 
 [GSQ - March 2020](https://koalageo.github.io/presentations/GSQ-2020-03)
 
+[GSQ - July 2023](https://koalageo.github.io/presentations/GSQ-2023-07)
+
 [GSSA - March 2020](https://koalageo.github.io/presentations/GSSA-2020-03)
 
 [GSNSW - April 2021](https://koalageo.github.io/presentations/GSNSW-2021-04)
